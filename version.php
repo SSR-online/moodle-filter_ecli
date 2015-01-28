@@ -27,3 +27,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version  = 2015012804;
 $plugin->requires = 2014111002;  // Requires Moodle version 2.8.
+$plugin->component = 'filter_ecli';
