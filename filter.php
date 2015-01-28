@@ -25,12 +25,12 @@
 
 class filter_ecli extends moodle_text_filter {
     public function filter($text, array $options = array()) {
-        global $CFG;
         $target = '';
+        $globaltarget = get_config('filter_ecli','target');
         if (isset($this->localconfig['target'])) {
             $target = ($this->localconfig['target'] == 'blank') ? 'target="_blank"' : '';
-        } else if (isset($CFG->filter_ecli_target)) {
-            $target = ($CFG->filter_ecli_target == 'blank') ? 'target="_blank"' : '';
+        } else if (isset($globaltarget)) {
+            $target = ($globaltarget == 'blank') ? 'target="_blank"' : '';
         }
         return preg_replace('(ECLI:NL[a-zA-Z:0-9]*)',
             '<a '.$target.' href="http://uitspraken.rechtspraak.nl/inziendocument?id=$0">$0</a>',

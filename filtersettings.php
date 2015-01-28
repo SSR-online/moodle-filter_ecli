@@ -27,6 +27,6 @@ $select = array(
     'default' => get_string('target_default', 'filter_ecli'),
     'blank' => get_string('target_blank', 'filter_ecli'),
 );
-$settings->add(new admin_setting_configselect('filter_ecli_target',
+$settings->add(new admin_setting_configselect('filter_ecli/target',
         get_string('target', 'filter_ecli'),
         get_string('target_desc', 'filter_ecli'), 'target', $select, PARAM_NOTAGS));
