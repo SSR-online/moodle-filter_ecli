@@ -25,6 +25,10 @@
 
 class filter_ecli extends moodle_text_filter {
     public function filter($text, array $options = array()) {
+        //pre-check to avoid unnecessary processing. (https://github.com/joostvanderborg/moodle-filter_ecli/issues/1).
+        if(strpos($text, 'ECLI:NL')===false) {
+            return $text;            
+        }
         $target = '';
         $globaltarget = get_config('filter_ecli','target');
         if (isset($this->localconfig['target'])) {
