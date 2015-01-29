@@ -29,4 +29,4 @@ $plugin->version  = 2015012901;
 $plugin->requires = 2014111002;  // Requires Moodle version 2.8.
 $plugin->component = 'filter_ecli';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v1.0.1';
+$plugin->release = 'v1.0.3';
